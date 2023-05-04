@@ -18,3 +18,10 @@ class RegisterForm(FlaskForm):
     email = EmailField("Email", validators=[InputRequired()])
     first_name = StringField("First Name", validators=[InputRequired()])
     last_name = StringField("Last Name", validators=[InputRequired()])
+    
+class FeedbackForm(FlaskForm):
+    """Form for adding feedback."""
+    title = StringField("Title", validators=[InputRequired()])
+    content = StringField("Add feedback", validators=[InputRequired()])
+    
+    
